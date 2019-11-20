@@ -1,0 +1,25 @@
+{
+  "name": "pinetree-mobile",
+  "version": "1.0.0",
+  "description": "My neat Nuxt.js project",
+  "author": "Nelson Tan",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "element-ui": "^2.4.11",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.27",
+    "node-sass": "^4.13.0",
+    "nuxt": "^2.0.0",
+    "sass-loader": "^8.0.0"
+  },
+  "devDependencies": {
+    "detectizr": "^2.2.0",
+    "webpack-modernizr-loader": "^5.0.0"
+  }
+}

@@ -1,0 +1,132 @@
+.el-main{
+    background: #000;
+    color: #fff;
+    min-height: 100vh;
+    a{
+        color: inherit;
+        text-decoration: none;
+    }
+}
+.links {
+    padding-top: 15px;
+}
+
+@import '_header';
+@import '_fontello';
+@import '_footer';
+.el-button--default{
+    background: #000;
+    border: #000;
+    color: #fff;
+}
+.el-button--primary{
+    background: #3c8dbc;
+    border-color: #3c8dbc;
+}
+.el-button--success{
+    background: #00c0ef;
+    border-color: #00c0ef;
+    &.is-plain{
+        background: transparent;
+        border-width: 3px;
+        border-color: #00c0ef;
+        color: #00c0ef;
+    }
+}
+.el-button--login{
+    background: #646981;
+    color: #fff;
+    width: 100%;
+    display: block;
+    margin-top: 1em;
+}
+.el-button--message{
+    background: #55b9f5;
+    color: #fff;
+    width: 100%;
+    display: block;
+}
+.el-button--info{
+    background: #e0e1e2;
+    border-color: #e0e1e2;
+    color: #616161;
+}
+.el-button--transfer{
+    background: #55b9f5;
+    color: #fff;
+    width: 100%;
+    display: block;
+    margin: 1em auto;
+}
+.el-container{
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 5em;
+    img{
+        max-width: 100%;
+    }
+}
+.marquee{
+    background: #777777;
+    color: #fff;
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    line-height: 3;
+    height: 3em;
+    display: block;
+    &:before{
+        content:'最新消息';
+        display: inline-block;
+        margin-right: 0.5em;
+        margin-left: 0.5em;
+        font-size: 14px;
+        line-height: 2;
+
+    }
+}
+.el-message-box{
+    max-width: 90vw;
+}
+
+.float-1{
+    position: fixed;
+    margin: 0  #{(13/375*100%)} #{(38/375*100%)} ;
+    bottom: 0;
+    left: 0;
+    // width: 3em;
+    line-height: 1;
+    z-index: 2050;
+}
+.float-2{
+    position: fixed;
+    margin: 0 #{(13/375*100%)}  #{(30/375*100%)} 0;
+    bottom: 0;
+    right: 0;
+    // width: 3em;
+    line-height: 1;
+    z-index: 2050;
+}
+.block{
+    display: block;
+    img{
+        display: block;
+    }
+}
+.el-drawer{
+    width: 100vw!important;
+}
+.el-drawer__body{
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+a{
+    color: #55b9ff;
+}
+@import 'member-center';
+@import 'member-bankcards';
+@import 'member-announcements';
+@import 'member-login';
+@import 'member-message';
+@import 'member-transfer';
+@import 'member-rebate';

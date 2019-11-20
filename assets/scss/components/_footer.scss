@@ -1,0 +1,25 @@
+.el-footer{
+    height: auto!important;
+    position: fixed;
+    z-index: 2050;
+    bottom: 0;
+    width: 100%;
+    background: #000;
+    hr{
+        border-width: 0;
+        border-top-width: #{(30/375*100vw)};
+        border-bottom: 0;
+        margin: 0 -20px;
+        border-color: #999;
+    }
+    nav{
+        display: flex;
+        justify-content: space-around;
+        padding: 1em 0;
+        width: 66.6666vw;
+        margin: 0 auto;
+        a{
+            text-align: center;
+        }
+    }
+}
