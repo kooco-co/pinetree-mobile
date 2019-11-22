@@ -1,9 +1,3 @@
-const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
-  base: '/nuxt-player/'
-} : {}
-const publicPath = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
-  publicPath: 'js'
-} : {}
 export default {
   mode: 'spa',
   /*
@@ -36,6 +30,7 @@ export default {
   plugins: [
     '@/plugins/modernizr-plugin',
     '@/plugins/element-ui',
+    '@/plugins/i18n',
     // '@/plugins/detectizr'
   ],
   /*

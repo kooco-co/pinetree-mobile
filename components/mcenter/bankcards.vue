@@ -1,10 +1,10 @@
 <template>
   <el-drawer class="member-bankcards"
-    title="会员中心"
+    :title="$t('Member Center')"
     name="bank"
     :visible.sync="isDrawerOpened"
     :direction="direction"
-    :before-close="handleClose">
+    ref="drawerContainer">
     <el-row>
       <el-col :xs="12">
         <el-button>电子钱包</el-button>
@@ -80,29 +80,23 @@
 
 <script>
 
+import logoutButton from './logoutButton'
+import Vue from 'vue'
+var logout = Vue.extend(logoutButton)
+
 export default {
   name: 'bank',
   data: () => {
     return {
       direction: 'rtl',
-      isDrawerOpened: false
+      isDrawerOpened: false,
+      requiredLogin: true,
     }
   },
   props:["drawer"],
   components: {
   },
   mounted() {
-    // var $this = this;
-    // setInterval(function(){
-    //   $this.EST = $this.timertick();
-    // },999);
-    var elem = document.querySelector('.member-bankcards .el-drawer__header');
-    if(elem){
-      var a = document.createElement('a');
-      elem.prepend(a);
-      a.href = 'javascript:logout()';
-      a.innerHTML = '登出';
-    }
   },
   methods:{
     close: function(){

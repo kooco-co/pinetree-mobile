@@ -1,24 +1,6 @@
 <template>
   <el-main>
-    <el-header>
-      <a class="logo" href="javascript:"><img src="img/BBOS_logo_XL.png"></a>
-      <a @click="menuClick" :class="['menu',{'on': menuOn}]" href="javascript:">
-        <img src="img/bur.png"></a>
-      <i class="overlay" @click="menuClick"></i>
-      <nav>
-        <a href="javascript:" @click="function(){ menuClick(); $refs.bank.open() }">bank</a>
-        <a href="javascript:" @click="function(){ menuClick(); $refs.mcenter.open() }">member center</a>
-        <a href="javascript:" @click="function(){ menuClick(); $refs.announcements.open()}">announcements</a>
-        <a href="javascript:" @click="function(){ menuClick(); $refs.message.open()}">messages</a>
-        <a href="javascript:" @click="function(){ menuClick(); $refs.transfer.open()}">transfer</a>
-        <a href="javascript:" @click="function(){ menuClick(); $refs.rebate.open()}">rebate</a>
-      </nav>
-      
-      <a class="login" @click="$refs.login.open()">
-        login
-      </a>
-    </el-header>
-
+    <headerMenu :items="menuItem"></headerMenu>
     <el-container>
       <el-row>
         <el-col :xs="24">
@@ -54,9 +36,9 @@
     <hr>
     <el-footer>
       <nav>
-        <a href="javascript:"><img src="img/online_deposit_icon_n.png"><br>deposit</a>
-        <a href="javascript:"><img src="img/0_icon_n.png"><br>special</a>
-        <a href="javascript:"><img src="img/more_icon_n.png"><br>more</a>
+        <a href="javascript:"><img src="img/online_deposit_icon_n.png"><br>{{$t('_footer_promotions')}}</a>
+        <a @click="function(){ $refs.memberCenter.open() }"><img src="img/0_icon_n.png"><br>{{$t('_footer_member_center')}}</a>
+        <a href="javascript:"><img src="img/more_icon_n.png"><br>{{$t('_footer_vip')}}</a>
       </nav>
     </el-footer>
 
@@ -65,47 +47,48 @@
 
 
     <memberCenter ref="mcenter" drawer="false"></memberCenter>
-    <bankcards ref="bank" drawer="false"></bankcards>
     <login ref="login" drawer="false"></login>
-    <announcements ref="announcements" drawer="false"></announcements>
-    <message ref="message" drawer="false"></message>
-    <transfer ref="transfer" drawer="false"></transfer>
-    <rebate ref="rebate" drawer="false"></rebate>
   </el-main>
 </template>
 
 <script>
-import memberCenter from '../components/mcenter/detail'
-import bankcards from '../components/mcenter/bankcards'
+import headerMenu from '../components/nav'
 import login from '../components/mcenter/login'
-import announcements from '../components/mcenter/announcements'
-import message from '../components/mcenter/message'
-import transfer from '../components/mcenter/transfer'
-import rebate from '../components/mcenter/rebate'
+import memberCenter from '../components/mcenter/index'
+import logoutButton from '../components/mcenter/logoutButton'
+import Vue from 'vue'
+var logout = Vue.extend(logoutButton)
+
 
 export default {
   data: () => {
     return {
       direction: 'rtl',
-      menuOn: false
+      menuItem: {},
     }
   },
   components: {
-    memberCenter,
-    bankcards,
-    announcements,
+    headerMenu,
     login,
-    message,
-    transfer,
-    rebate
+    memberCenter,
   },
   mounted() {
+    this.menuItem = {
+      mcenter: this.$refs.mcenter,
+      login: this.$refs.login,
+    };
+    for(var idx in this.$refs){
+      var comp = this.$refs[idx];
+      var requiredLogin = !!comp.$data['requiredLogin'];
+      if(requiredLogin){
+        // console.log(comp)
+        var instance = new logout({propsData: { label: '登出' }})
+        instance.$mount() ;
+        comp.$refs.drawerContainer.$refs.drawer.querySelector('header').prepend(instance.$el);
+      }
+    }
   },
   methods:{
-    menuClick: function(){
-      this.menuOn = !this.menuOn;
-    }
-
   }
 }
 </script>

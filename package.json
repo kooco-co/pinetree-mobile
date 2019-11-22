@@ -5,7 +5,7 @@
   "author": "Nelson Tan",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "nuxt --hostname 0.0.0.0 --port 3333",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate"
@@ -16,7 +16,10 @@
     "moment-timezone": "^0.5.27",
     "node-sass": "^4.13.0",
     "nuxt": "^2.0.0",
-    "sass-loader": "^8.0.0"
+    "nuxt-i18n": "^6.4.0",
+    "sass-loader": "^8.0.0",
+    "vue-i18n": "^8.15.0",
+    "vue-i18n-filter": "^0.1.6"
   },
   "devDependencies": {
     "detectizr": "^2.2.0",

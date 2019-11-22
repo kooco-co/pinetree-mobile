@@ -1,9 +1,10 @@
 <template>
   <el-drawer class="member-messages"
-    title="会员中心"
+    :title="$t('Member Center')"
     name="messages"
     :visible.sync="isDrawerOpened"
-    :direction="direction">
+    :direction="direction"
+    ref="drawerContainer">
     <h3>站內信</h3>
     <el-row class="sub">
         <el-col :xs="16">
@@ -63,7 +64,7 @@
                 标题
             </el-col>
             <el-col :xs="16">
-                <a href="javascript:">你好</a>
+                <a href="javascript:">早安</a>
             </el-col>
             <el-col :xs="8">
                 发送时间
@@ -103,7 +104,7 @@
                 标题
             </el-col>
             <el-col :xs="16">
-                <a href="javascript:">你好</a>
+                <a href="javascript:">龜波~~~</a>
             </el-col>
             <el-col :xs="8">
                 发送时间
@@ -112,16 +113,21 @@
                 2019-05-07 12:14:45
             </el-col>
             <el-col :xs="8">
-                <span class="unread">状态</span>
+                <span class="read">状态</span>
             </el-col>
             <el-col :xs="16">
-                <span class="unread">未读</span>
+                <span class="read">已读</span>
             </el-col>
             <el-col :xs="8">
                 功能
             </el-col>
             <el-col :xs="16">
                 <a class="del" href="javascript:"><i class="el-icon-delete"></i></a>
+            </el-col>
+            <el-col :xs="24">
+                <aside class="message-content">
+                    早安！
+                </aside>
             </el-col>
         </el-row>
     </aside>
@@ -138,7 +144,7 @@
                 标题
             </el-col>
             <el-col :xs="16">
-                <a href="javascript:">你好</a>
+                <a href="javascript:">こんにちは！</a>
             </el-col>
             <el-col :xs="8">
                 发送时间
@@ -147,10 +153,10 @@
                 2019-05-07 12:14:45
             </el-col>
             <el-col :xs="8">
-                <span class="unread">状态</span>
+                <span class="read">状态</span>
             </el-col>
             <el-col :xs="16">
-                <span class="unread">未读</span>
+                <span class="read">已读</span>
             </el-col>
             <el-col :xs="8">
                 功能
@@ -158,43 +164,18 @@
             <el-col :xs="16">
                 <a class="del" href="javascript:"><i class="el-icon-delete"></i></a>
             </el-col>
-        </el-row>
-    </aside>
-    <aside class="single-message">
-        <h4>5</h4>
-        <el-row class="sub">
-            <el-col :xs="8">
-                类别
-            </el-col>
-            <el-col :xs="16">
-                一般通知
-            </el-col>
-            <el-col :xs="8">
-                标题
-            </el-col>
-            <el-col :xs="16">
-                <a href="javascript:">你好</a>
-            </el-col>
-            <el-col :xs="8">
-                发送时间
-            </el-col>
-            <el-col :xs="16">
-                2019-05-07 12:14:45
-            </el-col>
-            <el-col :xs="8">
-                <span class="unread">状态</span>
-            </el-col>
-            <el-col :xs="16">
-                <span class="unread">未读</span>
-            </el-col>
-            <el-col :xs="8">
-                功能
-            </el-col>
-            <el-col :xs="16">
-                <a class="del" href="javascript:"><i class="el-icon-delete"></i></a>
+            <el-col :xs="24">
+                <aside class="message-content">
+                    早安！
+                </aside>
             </el-col>
         </el-row>
     </aside>
+    <el-pagination 
+        small
+        layout="prev, pager, jumper, next"
+        :total="5">
+    </el-pagination>
   </el-drawer>
 </template>
 
@@ -205,20 +186,14 @@ export default {
   data: () => {
     return {
       direction: 'rtl',
-      isDrawerOpened: false
+      isDrawerOpened: false,
+      requiredLogin: true
     }
   },
   props:["drawer"],
   components: {
   },
   mounted() {
-    var elem = document.querySelector('.member-messages .el-drawer__header');
-    if(elem){
-      var a = document.createElement('a');
-      elem.prepend(a);
-      a.href = 'javascript:logout()';
-      a.innerHTML = '登出';
-    }
   },
   methods:{
     close: function(){

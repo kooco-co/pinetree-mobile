@@ -1,11 +1,12 @@
 <template>
   <el-drawer class="member-rebate"
-    title="会员中心"
+    :title="$t('Member Center')"
     name="rebate"
     :visible.sync="isDrawerOpened"
-    :direction="direction">
+    :direction="direction"
+    ref="drawerContainer">
     <h3>返水明细</h3>
-    <aside class="rebate-content" v-for="(item,index) in pagedData">
+    <aside class="rebate-content" :key="index" v-for="(item,index) in pagedData">
         <el-row>
             <el-col class="th" :xs="8">SN</el-col>
             <el-col :xs="16"><span>{{item.SN}}</span></el-col>
@@ -57,19 +58,13 @@ export default {
       pageSize: 10,
       currentPage: 1,
       listData:[],
+      requiredLogin: true
     }
   },
   props:["drawer"],
   components: {
   },
   mounted() {
-    var elem = document.querySelector('.member-rebate .el-drawer__header');
-    if(elem){
-      var a = document.createElement('a');
-      elem.prepend(a);
-      a.href = 'javascript:logout()';
-      a.innerHTML = '登出';
-    }
     this.fakeData();
   },
   computed: {

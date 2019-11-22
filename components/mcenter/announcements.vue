@@ -3,7 +3,8 @@
     title="会员中心"
     name="announcements"
     :visible.sync="isDrawerOpened"
-    :direction="direction">
+    :direction="direction"
+    ref="drawerContainer">
     <h3>公告</h3>
     <h4>1</h4>
     <el-row class="sub">
@@ -44,24 +45,14 @@ export default {
   data: () => {
     return {
       direction: 'rtl',
-      isDrawerOpened: false
+      isDrawerOpened: false,
+      requiredLogin: true
     }
   },
   props:["drawer"],
   components: {
   },
   mounted() {
-    // var $this = this;
-    // setInterval(function(){
-    //   $this.EST = $this.timertick();
-    // },999);
-    var elem = document.querySelector('.member-announcements .el-drawer__header');
-    if(elem){
-      var a = document.createElement('a');
-      elem.prepend(a);
-      a.href = 'javascript:logout()';
-      a.innerHTML = '登出';
-    }
   },
   methods:{
     close: function(){

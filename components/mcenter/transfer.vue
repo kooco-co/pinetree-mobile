@@ -1,14 +1,14 @@
 <template>
   <el-drawer class="member-transfer"
-    title="会员中心"
+    :title="$t('Member Center')"
     name="transfer"
     :visible.sync="isDrawerOpened"
     :direction="direction">
     
     <el-row class="sub">
         <el-col :xs="24">
-            <el-radio v-model="radio" label="1">自动转换</el-radio>
-            <el-radio v-model="radio" label="2">手动转换</el-radio>
+            <el-radio v-model="isAutoTransfer" label="1">自动转换</el-radio>
+            <el-radio v-model="isAutoTransfer" label="0">手动转换</el-radio>
         </el-col>
     </el-row>
     <el-row class="bd">
@@ -18,7 +18,7 @@
                     <span>总余额：</span><span class="highlight">406.85</span>
                     <a href="javascript:"><i class="el-icon-refresh"></i></a>
                 </small>
-                <el-button v-if="radio==1" type="transfer">一键归户</el-button>
+                <el-button v-if="isAutoTransfer==1" type="transfer">一键归户</el-button>
             </aside>
         </el-col>
         <el-col :xs="24">
@@ -27,7 +27,7 @@
                 </small>
             </aside>
         </el-col>
-        <el-col :xs="24" v-if="radio==2">
+        <el-col :xs="24" v-if="isAutoTransfer==0">
             <h5>转出</h5>
             <el-select value="0">
                 <el-option value="0" label="请选择帐户">请选择帐户</el-option>
@@ -39,6 +39,8 @@
             <h5>金额</h5>
             <el-input placeholder="0.00"></el-input>
             <el-button type="transfer">确定转帐</el-button>
+        </el-col>
+        <el-col :xs="24">
             <hr class="dashed">
         </el-col>
         <el-col :xs="24">
@@ -58,6 +60,10 @@
             <span class="amount" data-cap="LG棋牌">--</span>
         </el-col>
     </el-row>
+    <aside class="hint" v-if="isAutoTransfer==1">
+        <p>温馨提示: </p>
+        <p>切换为【自动转换】模式重新开启游戏平台，系统会自动将主帐户余额转入正在进行中的游戏 (包含新入款成功)。</p>
+    </aside>
   </el-drawer>
 </template>
 
@@ -69,7 +75,7 @@ export default {
     return {
       direction: 'rtl',
       isDrawerOpened: false,
-      radio: '1'
+      isAutoTransfer: '0'
     }
   },
   props:["drawer"],

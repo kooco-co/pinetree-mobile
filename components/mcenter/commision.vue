@@ -1,11 +1,12 @@
 <template>
-  <el-drawer class="member-rebate"
-    title="会员中心"
-    name="rebate"
+  <el-drawer class="member-commision"
+    :title="$t('Member Center')"
+    name="commision"
     :visible.sync="isDrawerOpened"
-    :direction="direction">
-    <h3>返水明细</h3>
-    <aside class="rebate-content" v-for="(item,index) in pagedData">
+    :direction="direction"
+    ref="drawerContainer">
+    <h3>佣金明细</h3>
+    <aside class="commision-content" v-for="(item,index) in pagedData">
         <el-row>
             <el-col class="th" :xs="8">SN</el-col>
             <el-col :xs="16"><span>{{item.SN}}</span></el-col>
@@ -19,23 +20,16 @@
             <el-col :xs="16"><span>{{item.duration1}}~<br>{{item.duration2}}</span></el-col>
         </el-row>
         <el-row>
-            <el-col class="th" :xs="8">目前有效投注</el-col>
-            <el-col :xs="16">
-                <span v-if="!isNaN(item.effectiveStake*1)">{{item.effectiveStake}}</span>
-                <a v-else>实时计算</a>
-            </el-col>
+            <el-col class="th" :xs="8">净佣金</el-col>
+            <el-col :xs="16"><span>{{item.commision}}</span></el-col>
         </el-row>
         <el-row>
-            <el-col class="th" :xs="8">目前返水金额</el-col>
-            <el-col :xs="16"><span>{{item.rebate}}</span></el-col>
-        </el-row>
-        <el-row>
-            <el-col class="th" :xs="8">状态</el-col>
+            <el-col class="th" :xs="8">佣金状态</el-col>
             <el-col :xs="16"><span>{{item.status}}</span></el-col>
         </el-row>
         
     </aside>
-    <el-pagination
+    <el-pagination v-if="listData.length > pageSize"
         small
         :page-size="pageSize"
         :current-page="currentPage"
@@ -49,7 +43,7 @@
 <script>
 
 export default {
-  name: 'rebate',
+  name: 'commision',
   data: () => {
     return {
       direction: 'rtl',
@@ -57,19 +51,13 @@ export default {
       pageSize: 10,
       currentPage: 1,
       listData:[],
+      requiredLogin: true
     }
   },
   props:["drawer"],
   components: {
   },
   mounted() {
-    var elem = document.querySelector('.member-rebate .el-drawer__header');
-    if(elem){
-      var a = document.createElement('a');
-      elem.prepend(a);
-      a.href = 'javascript:logout()';
-      a.innerHTML = '登出';
-    }
     this.fakeData();
   },
   computed: {
@@ -91,17 +79,16 @@ export default {
     },
     fakeData: function(){
         var ret = [];
-        for(var i=0;i<113;i++){
+        for(var i=0;i<1;i++){
             var rand = Math.floor(Math.random()*new Date()%10);
             // console.log(rand);
             ret.push({
-                SN: i+100,
-                cycle: '2019-09-29周返',
-                duration1: '2019-09-29 00:00:00',
-                duration2: '2019-10-05 23:59:59',
-                effectiveStake:  ( rand > 5 ) ? '65.00' : '--',
-                rebate: ( rand > 5 ) ? '0.65' : '--',
-                status: '已领取'
+                SN: i+1,
+                cycle: '0418',
+                duration1: '2019-04-17 11:00:00',
+                duration2: '2019-04-18 10:59:59',
+                commision: '426.00',
+                status: '已派發'
             });
         }
         this.listData = ret;
