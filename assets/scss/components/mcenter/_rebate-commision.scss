@@ -1,0 +1,41 @@
+.member-rebate,
+.member-commision{
+    
+    h3{
+        text-align: center;
+        margin-bottom: 1em;
+    }
+    
+    .el-drawer__body{
+        padding: 2em 1em 7em;
+        color: #000;  
+        background: #f6f6f6;
+    }
+    .commision-content,
+    .rebate-content{
+        font-size: 0.8em;
+        padding-bottom: 2em;
+        position: relative;
+        a{
+            color: #000cff;
+            text-decoration: underline;
+        }
+        .el-col{
+            height: 3em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 1em;
+            background: #fff;
+            &.th{
+                background-color: #8e9f7c;
+                color: #fff;
+                text-align: center;
+                line-height: 3;
+            }
+        }
+        .el-row{
+            margin-top: 0.2em;
+        }
+    }
+}

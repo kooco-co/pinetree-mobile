@@ -1,0 +1,31 @@
+{
+    "mcenter": "会員管理",
+    "bank": "出金口座設定",
+    "login": "ログイン",
+    "announcements": "お知らせ",
+    "message": "メッセージ",
+    "rebate": "リベート記録",
+    "bethistory": "ベット履歴",
+    "funds": "入出金履歴",
+
+    "home": "ホーム",
+    "vip": "VIP",
+    "promotion": "プロモーション",
+    "affiliate": "アフィリエイト",
+    "deposit withdraw": "入出金方法",
+    "terms": "ご利用規約",
+    "locales": "言語選択",
+    "desktop": "PC版",
+    "transfer": "残高移動",
+    "deposit": "入金",
+    "withdraw": "出金",
+    
+    "live casino": "ライブカジノ",
+    "casino": "カジノ",
+    "logout": "ログアウト",
+
+
+    "_footer_promotions": "プロモーション",
+    "_footer_member_center": "会員管理",
+    "_footer_vip": "VIP"
+}

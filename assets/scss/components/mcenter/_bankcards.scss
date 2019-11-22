@@ -1,0 +1,35 @@
+.member-bankcards{
+    
+    .el-drawer__body{
+        padding: 3em 2em 7em;
+    }
+    .underline{
+        display: inline-block;
+        line-height: 2.5;
+        border-bottom: 2px solid currentColor;
+        padding: 0 0.5em;
+    }
+    table{
+        border: 1px solid #dcdcdc;
+        margin: 1em auto;
+        border-radius: 5px;
+        font-size: 0.9em;;
+        tr+tr th,
+        tr+tr td{
+            border-top: 1px solid #dcdcdc;
+            // display: table-row;
+        }
+        th+th,
+        td+td{
+            border-left: 1px solid #dcdcdc;
+        }
+        td,th{
+            padding: 1em;
+        }
+        thead th{
+            border-bottom: 1px solid #dcdcdc;
+            // border-radius: 5px;
+            background: #f9fafb;
+        }
+    }
+}

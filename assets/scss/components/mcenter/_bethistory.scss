@@ -1,0 +1,53 @@
+.member-bethistory{
+    .summary-container{
+        background: #eee;
+        padding: 2em 1em 1em;
+        h3{
+            margin-top: 0;
+            text-align: left;
+            margin-bottom: 1em;
+            padding: 0;
+        }
+    }
+    .detail-container{
+        padding: 0.5em 1em 1em;
+    }
+    .el-drawer__body{
+        padding: 0 0 7em;
+    }
+    h3{
+        text-align: left;
+        margin-bottom: 1em;
+    }
+    .summary{
+        background: #fff;
+        margin-bottom: 1em;
+        vertical-align: bottom;
+        padding: 0.5em 0.5em 0;
+        font-weight: bold;
+        .text-right{
+            text-align: right;
+            line-height: 2;
+        }
+        .light{
+            font-weight: normal;
+        }
+        &.blue{
+            border-top: 5px solid #54b9ff;
+            .hl{
+                color: #54b9ff;
+            }
+        }
+    }
+    .el-date-editor--daterange,
+    .el-select{
+        width: 100%;
+        margin-bottom: 0.5em;
+    }
+    .el-button{
+        width: 100%;
+    }
+    .label-center{
+        line-height: 2.5em;
+    }
+}

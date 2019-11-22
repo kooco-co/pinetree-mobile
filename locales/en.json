@@ -1,0 +1,31 @@
+{
+    "mcenter": "Member Center",
+    "bank": "Bank Cards",
+    "login": "Login",
+    "announcements": "Announcements",
+    "message": "Messages",
+    "rebate": "Rebate",
+    "bethistory": "Bet History",
+    "funds": "Funds Detail",
+    "accountdetail": "Account Detail",
+
+    "home": "Home",
+    "vip": "VIP",
+    "promotion": "Promotion",
+    "affiliate": "Agent",
+    "terms": "Terms & Policy",
+    "locales": "Locales",
+    "desktop": "Desktop Version",
+    "transfer": "Trans. Credit",
+    "deposit": "Deposit",
+    "withdraw": "Withdraw",
+    
+    "live casino": "Live Casino",
+    "casino": "Casino",
+    "logout": "Log out",
+    "leave member center": "Leave member center",
+
+    "_footer_promotions": "promotions",
+    "_footer_member_center": "member center",
+    "_footer_vip": "VIP"
+}

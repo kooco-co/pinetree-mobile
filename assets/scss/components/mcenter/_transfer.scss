@@ -1,0 +1,104 @@
+.member-transfer{
+    .el-drawer__header{
+        flex-direction: row-reverse;
+        background: #000;
+        color: #fff;
+        padding: 0;
+        line-height: 3;
+        display: flex;
+        margin-bottom: 0;
+        [role=heading]{
+            flex: 1;
+            text-align: center;
+        }
+        a{
+            flex: 0;
+            text-align: center;
+            width: auto;
+            padding: 0 0.5em;
+            color: #fff;
+            text-decoration: none;
+            white-space: nowrap;
+            font-size: 0.8em;
+        }
+    }
+    .el-drawer__close-btn{
+        i:before{
+            content:"\e6de";
+        }
+    }
+    .el-drawer__body{
+        padding: 2em 1em 7em;
+        color: #7e7e7e;  
+    }
+    .sub [class^=el-col]{
+        padding: 0.5em;
+        &:last-child{
+            padding-bottom: 0;
+        }
+    }
+    .bd{
+        margin-top: 2em;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        padding-bottom: 2em;
+        [class^=el-col]{            
+            padding: 0.25em 1em;
+        }
+        h5{
+            margin-top: 1em;
+        }
+        .el-select{
+            width: 100%;
+        }
+    }
+    .cap{
+        border-bottom: 1px solid #ddd;
+        margin: -0.25em -1em;  
+        padding: 0.25em 1em;
+        &.dark{
+            background: #e8e8e8;
+            color: #000;
+        }
+        .highlight{
+            color: #53b2f3;
+            font-weight: bold;
+        }
+        i{
+            color: #265691;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+    }
+    hr.dashed{
+        border-style: dashed;
+        border-color: #e8e8e8;
+        margin: 1.5em 0 2.5em;
+    }
+    .amount{
+        border: 1px solid #ddd;
+        display: block;
+        text-align: right;
+        line-height: 2.5;
+        padding: 0 0.5em;
+        position: relative;
+        margin-bottom: 1em;
+        &:before{
+            content: attr(data-cap);
+            position: absolute;
+            text-align: left;
+            font-weight: bold;
+            color: #000;
+            left: 0;
+            padding: 0 0.5em;
+        }
+    }
+    .hint{
+        font-size: 0.8em;
+        margin-top: 1em;
+        p{
+            margin-bottom: 0.2em;
+            line-height: 1.8;
+        }
+    }
+}
