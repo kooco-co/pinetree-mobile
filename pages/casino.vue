@@ -16,7 +16,7 @@
             <el-tabs v-model="activeName" type="card">
                 <el-tab-pane label="玩过" name="first">
                     <el-row>
-                        <el-col v-for="(item,index) in played" :key="index" :xs="6">
+                        <el-col v-for="(item,index) in played" :key="index" :span="6">
                             <a href="javascript:">
                                 <img :src="item.image">
                                 {{item.label}}
@@ -26,7 +26,7 @@
                 </el-tab-pane>
                 <el-tab-pane label="最爱" name="second">
                     <el-row>
-                        <el-col v-for="(item,index) in fav" :key="index" :xs="6">
+                        <el-col v-for="(item,index) in fav" :key="index" :span="6">
                             <a href="javascript:">
                                 <img :src="item.image">
                                 {{item.label}}
@@ -36,7 +36,7 @@
                 </el-tab-pane>
                 <el-tab-pane label="电子" name="third">
                     <el-row>
-                        <el-col v-for="(item,index) in casino" :key="index" :xs="6">
+                        <el-col v-for="(item,index) in casino" :key="index" :span="6">
                             <a href="javascript:">
                                 <img :src="item.image">
                                 {{item.label}}

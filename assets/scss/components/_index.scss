@@ -111,6 +111,7 @@
     display: block;
     img{
         display: block;
+        width: 100%;
     }
 }
 .el-drawer{
@@ -195,6 +196,7 @@ a{
     float: none;
     width: 100%;
 }
+
 .el-picker-panel{
     width: 100vw;
     min-width: 0;
@@ -202,4 +204,9 @@ a{
     left: 0!important;
     top: 0!important;
     border-radius: 0;
+}
+.el-date-range-picker .el-picker-panel__body{
+    min-width: 0;    
+    max-height: 85vh;
+    overflow: auto;
 }
