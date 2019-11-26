@@ -8,8 +8,8 @@
             <img src="img/BBOS_logo_XL.png">
             <nuxt-link to="/">{{$t('home')}}</nuxt-link>
             <!---->
-            <nuxt-link to="/casino">{{$t('live casino')}}</nuxt-link>
-            <nuxt-link to="/casino">{{$t('casino')}}</nuxt-link>
+            <nuxt-link v-if="isloggedin" to="/casino">{{$t('live casino')}}</nuxt-link>
+            <nuxt-link v-if="isloggedin" to="/casino">{{$t('casino')}}</nuxt-link>
             <!---->
             <a class="disabled">{{$t('vip')}}</a>
             <a class="disabled">{{$t('promotion')}}</a>
@@ -19,6 +19,8 @@
             <a v-if="isloggedin" href="javascript:" @click="open('mcenter')" >{{$t('mcenter')}}</a>
             <locales></locales>
             <nuxt-link to="/">{{$t('desktop')}}</nuxt-link>
+            <a v-if="isloggedin" @click="logout">{{$t('logout')}}</a>
+        </a>
             
         </nav>
         
