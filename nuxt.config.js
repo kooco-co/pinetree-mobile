@@ -4,6 +4,11 @@ const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
 const publicPath = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
   publicPath: 'js'
 } : {}
+const baseUrl = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  base: {
+    href: "https://kooco-co.github.io/pinetree-mobile/"
+  }
+} : {}
 
 export default {
   mode: 'spa',
@@ -12,6 +17,7 @@ export default {
   */
   head: {
     title: process.env.npm_package_name || '',
+    ...baseUrl,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },

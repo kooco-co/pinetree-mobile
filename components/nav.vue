@@ -1,6 +1,6 @@
 <template>
     <el-header>
-        <nuxt-link class="logo" to="javascript:"><img src="img/BBOS_logo_XL.png"></nuxt-link>
+        <nuxt-link class="logo" to="/"><img src="img/BBOS_logo_XL.png"></nuxt-link>
         <a @click="menuClick" :class="['menu',{'on': menuOn}]" href="javascript:">
             <img src="img/bur.png"></a>
         <i class="overlay" @click="menuClick"></i>
