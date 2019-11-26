@@ -95,85 +95,85 @@ export default {
             casino:[
                 {
                     label: "BB电子",
-                    image: "/img/casino/bbin.png"
+                    image: "img/casino/bbin.png"
                 },
                 {
                     label: "MG电子",
-                    image: "/img/casino/mg.png"
+                    image: "img/casino/mg.png"
                 },
                 {
                     label: "GNS电子",
-                    image: "/img/casino/gns.png"
+                    image: "img/casino/gns.png"
                 },
                 {
                     label: "ISB电子",
-                    image: "/img/casino/isb.png"
+                    image: "img/casino/isb.png"
                 },
                 {
                     label: "HB电子",
-                    image: "/img/casino/hb.png"
+                    image: "img/casino/hb.png"
                 },
                 {
                     label: "JDB电子",
-                    image: "/img/casino/jdb.png"
+                    image: "img/casino/jdb.png"
                 },
                 {
                     label: "AG电子",
-                    image: "/img/casino/ag_casino.png"
+                    image: "img/casino/ag_casino.png"
                 },
                 {
                     label: "大满贯电子",
-                    image: "/img/casino/mw.png"
+                    image: "img/casino/mw.png"
                 },
                 {
                     label: "RT电子",
-                    image: "/img/casino/rt.png"
+                    image: "img/casino/rt.png"
                 },
                 {
                     label: "SG电子",
-                    image: "/img/casino/sg.png"
+                    image: "img/casino/sg.png"
                 },
                 {
                     label: "BNG电子",
-                    image: "/img/casino/bng.png"
+                    image: "img/casino/bng.png"
                 },
                 {
                     label: "CQ9电子",
-                    image: "/img/casino/cq9.png"
+                    image: "img/casino/cq9.png"
                 },
                 {
                     label: "LG电子",
-                    image: "/img/casino/lg_casino.png"
+                    image: "img/casino/lg_casino.png"
                 },
                 {
                     label: "KA电子",
-                    image: "/img/casino/ka.png"
+                    image: "img/casino/ka.png"
                 },
                 {
-                    image: "/img/casino/icon_none.png"
+                    image: "img/casino/icon_none.png"
                 },
                 {
-                    image: "/img/casino/icon_none.png"
+                    image: "img/casino/icon_none.png"
                 },
             ],
             played:[
                 {
                     label: "ISB电子",
-                    image: "/img/casino/isb.png"
+                    image: "img/casino/isb.png"
                 }
             ],
             fav:[
                 {
                     label: "ISB电子",
-                    image: "/img/casino/isb.png"
+                    image: "img/casino/isb.png"
                 },
                 {
                     label: "GNS电子",
-                    image: "/img/casino/gns.png"
+                    image: "img/casino/gns.png"
                 },
                 {
                     label: "ISB电子",
-                    image: "/img/casino/isb.png"
+                    image: "img/casino/isb.png"
                 }
             ]
         }
