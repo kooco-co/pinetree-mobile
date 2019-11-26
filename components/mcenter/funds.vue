@@ -28,8 +28,8 @@
             </el-col>
             <el-col :xs="24">
                 <aside class="sort-button-container">
-                    <a @click="sort('asc')" :class="['sort-button', {'active': listSorting=='asc'}]"><img src="/img/asc.png"></a>
-                    <a @click="sort('desc')" :class="['sort-button', {'active': listSorting=='desc'}]"><img src="/img/desc.png"></a>
+                    <a @click="sort('asc')" :class="['sort-button', {'active': listSorting=='asc'}]"><img src="img/asc.png"></a>
+                    <a @click="sort('desc')" :class="['sort-button', {'active': listSorting=='desc'}]"><img src="img/desc.png"></a>
                 </aside>
             </el-col>
         </el-row>

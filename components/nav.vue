@@ -1,15 +1,15 @@
 <template>
     <el-header>
-        <a class="logo" href="javascript:"><img src="/img/BBOS_logo_XL.png"></a>
+        <nuxt-link class="logo" to="javascript:"><img src="img/BBOS_logo_XL.png"></nuxt-link>
         <a @click="menuClick" :class="['menu',{'on': menuOn}]" href="javascript:">
-            <img src="/img/bur.png"></a>
+            <img src="img/bur.png"></a>
         <i class="overlay" @click="menuClick"></i>
         <nav>
-            <img src="/img/BBOS_logo_XL.png">
-            <a href="/">{{$t('home')}}</a>
+            <img src="img/BBOS_logo_XL.png">
+            <nuxt-link to="/">{{$t('home')}}</nuxt-link>
             <!---->
-            <a href="/casino">{{$t('live casino')}}</a>
-            <a href="/casino">{{$t('casino')}}</a>
+            <nuxt-link to="/casino">{{$t('live casino')}}</nuxt-link>
+            <nuxt-link to="/casino">{{$t('casino')}}</nuxt-link>
             <!---->
             <a class="disabled">{{$t('vip')}}</a>
             <a class="disabled">{{$t('promotion')}}</a>
@@ -18,7 +18,7 @@
             <a class="disabled">{{$t('terms')}}</a>
             <a v-if="isloggedin" href="javascript:" @click="open('mcenter')" >{{$t('mcenter')}}</a>
             <locales></locales>
-            <a href="/">{{$t('desktop')}}</a>
+            <nuxt-link to="/">{{$t('desktop')}}</nuxt-link>
             
         </nav>
         

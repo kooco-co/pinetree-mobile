@@ -11,7 +11,7 @@
                 <span class="welcome">
                     <el-row>
                         <el-col :xs="12">
-                            <nuxt-link class="logo" to="/"> <img src="/img/BBOS_logo_XL.png"></nuxt-link>
+                            <nuxt-link class="logo" to="/"> <img src="img/BBOS_logo_XL.png"></nuxt-link>
                         </el-col>
                         <el-col :xs="12">
                             <aside class="user-info">
@@ -22,17 +22,17 @@
                     </el-row>
                     <el-row>
                         <el-col :xs="8">
-                            <a href="javascript:" class="icon-link"><img src="/img/icon_deposit_n.png"><img class="hover" src="/img/icon_deposit_h.png">
+                            <a href="javascript:" class="icon-link"><img src="img/icon_deposit_n.png"><img class="hover" src="img/icon_deposit_h.png">
                             <span>{{$t('deposit')}}</span>
                             </a>
                         </el-col>
                         <el-col :xs="8">
-                            <a href="javascript:" @click="openNext('transfer')" class="icon-link"><img src="/img/icon_exchange_n.png"><img class="hover" src="/img/icon_exchange_h.png">
+                            <a href="javascript:" @click="openNext('transfer')" class="icon-link"><img src="img/icon_exchange_n.png"><img class="hover" src="img/icon_exchange_h.png">
                             <span>{{$t('transfer')}}</span>
                             </a>
                         </el-col>
                         <el-col :xs="8">
-                            <a href="javascript:" class="icon-link"><img src="/img/icon_withdrawals_n.png"><img class="hover" src="/img/icon_withdrawals_h.png">
+                            <a href="javascript:" class="icon-link"><img src="img/icon_withdrawals_n.png"><img class="hover" src="img/icon_withdrawals_h.png">
                             <span>{{$t('withdraw')}}</span>
                             </a>
                         </el-col>
