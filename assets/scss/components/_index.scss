@@ -141,7 +141,7 @@
         color: #fff;
         text-decoration: none;
         white-space: nowrap;
-        font-size: 0.8em;
+        // font-size: 0.8em;
     }
 }
 .el-drawer__close-btn{
@@ -153,3 +153,38 @@ a{
     color: #55b9ff;
 }
 @import 'mcenter';
+
+.el-tabs__nav-wrap{
+    background: #363c5d;
+    margin-bottom: 0;
+}
+.el-tabs--card>.el-tabs__header .el-tabs__item{
+    color: #fff;
+    background: #363c5d;
+    border: 0;
+}
+.el-tabs--card>.el-tabs__header .el-tabs__nav{
+    border: 0;
+}
+.el-tabs--card>.el-tabs__header .el-tabs__item.is-active{
+    background: #272637;
+    box-shadow: 0 0 0 1px #565479 inset;
+}
+.el-tabs--card>.el-tabs__header{
+    border: 0;
+    margin: 0;
+}
+.el-tabs__content{
+    background: #ddd;    
+    min-height: 61vh;
+    color: #363c5d;
+    padding-top: 2em;
+    img{
+        display: block;
+        margin: 0 auto;
+    }
+    .el-col{
+        margin-bottom: 1em;
+        text-align: center;
+    }
+}

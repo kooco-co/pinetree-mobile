@@ -53,6 +53,7 @@
         <bethistory ref="bethistory" drawer="false"></bethistory>
         <funds ref="funds" drawer="false"></funds>
         <detail ref="accountdetail" drawer="false"></detail>
+        <reset ref="reset" drawer="false"></reset>
     </aside>
 </template>
 
@@ -68,8 +69,11 @@ import rebate from './rebate'
 import commision from './commision'
 import bethistory from './bethistory'
 import funds from './funds'
+import reset from './reset'
 import logoutButton from './logoutButton'
 import Vue from 'vue'
+import { mapState, mapGetters, mapActions } from "vuex";
+
 var logout = Vue.extend(logoutButton)
 
 export default {
@@ -84,10 +88,14 @@ export default {
             isDrawerOpened: false,
             requiredLogin: true,
             menuItem: {},
+            currentOpen: null
         }
     },
     props:["drawer"],
     computed: {
+        ...mapState("main", [
+        "isloggedin",
+        ]),
     },
     components: {
         bankcards,
@@ -98,7 +106,8 @@ export default {
         commision,
         bethistory,
         funds,
-        detail
+        detail,
+        reset
     },
     mounted() {
         var $this = this;
@@ -113,16 +122,26 @@ export default {
             bank: this.$refs.bank,
             message: this.$refs.message,
             announcements: this.$refs.announcements,
-            transfer: this.$refs.transfer
+            reset: this.$refs.reset
         };
         for(var idx in this.$refs){
             var comp = this.$refs[idx];
             var requiredLogin = !!comp.$data['requiredLogin'];
             if(requiredLogin){
                 // console.log(comp)
-                var instance = new logout({propsData: { label: this.$t('logout') }})
+                var instance = new logout({propsData: { label: this.$t('logout') }});
                 instance.$mount() ;
                 comp.$refs.drawerContainer.$refs.drawer.querySelector('header').prepend(instance.$el);
+                comp.$refs.drawerContainer.$refs.drawer.querySelector('header .logout').addEventListener('click', function(){
+                
+                    $this.$confirm($this.$t('leave member center'))
+                    .then(_ => {
+                        $this.setlogin(false);
+                        $this.$refs[$this.currentOpen].close();  
+                        $this.isDrawerOpened = false;
+                    })
+                    .catch(_ => {});
+                });
             }
         }
     },
@@ -134,8 +153,10 @@ export default {
             this.isDrawerOpened = true;
         },
         openNext: function(target){
-            if(this.$refs[target].open)
-                this.$refs[target].open();
+            if(this.$refs[target].open){
+                this.$refs[target].open();                
+                this.currentOpen = target;
+            }
         },
         handleClose(done) {
             this.$confirm(this.$t('leave member center'))
@@ -146,7 +167,14 @@ export default {
         },
         timertick: function(){
             return moment.tz('America/Santo_Domingo').format('YYYY-MM-DD HH:mm:ss');
-        }
+        },
+        logout: function(){
+            console.log('logout');
+            this.setlogin(false);
+        },
+        ...mapActions("main", [
+        "setlogin",
+        ])
 
     }
 }

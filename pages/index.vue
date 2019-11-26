@@ -37,7 +37,7 @@
     <el-footer>
       <nav>
         <a href="javascript:"><img src="img/online_deposit_icon_n.png"><br>{{$t('_footer_promotions')}}</a>
-        <a @click="function(){ $refs.memberCenter.open() }"><img src="img/0_icon_n.png"><br>{{$t('_footer_member_center')}}</a>
+        <a @click="function(){ $refs.mcenter.open() }"><img src="img/0_icon_n.png"><br>{{$t('_footer_member_center')}}</a>
         <a href="javascript:"><img src="img/more_icon_n.png"><br>{{$t('_footer_vip')}}</a>
       </nav>
     </el-footer>
@@ -47,16 +47,21 @@
 
 
     <memberCenter ref="mcenter" drawer="false"></memberCenter>
-    <login ref="login" drawer="false"></login>
+    <login ref="login" drawer="false" :reg="this.$refs.reg" :forget="this.$refs.forget"></login>
+    <reg ref="reg" drawer="false"></reg>
+    <forget ref="forget" drawer="false"></forget>
   </el-main>
 </template>
 
 <script>
 import headerMenu from '../components/nav'
 import login from '../components/mcenter/login'
+import reg from '../components/mcenter/reg'
+import forget from '../components/mcenter/forget'
 import memberCenter from '../components/mcenter/index'
 import logoutButton from '../components/mcenter/logoutButton'
 import Vue from 'vue'
+import { mapState, mapGetters, mapActions } from "vuex"
 var logout = Vue.extend(logoutButton)
 
 
@@ -71,8 +76,17 @@ export default {
     headerMenu,
     login,
     memberCenter,
+    reg,
+    forget
+  },
+  computed: {
+    ...mapState("main", [
+      "isloggedin",
+    ])
+  
   },
   mounted() {
+    // console.log(this.isloggedin);
     this.menuItem = {
       mcenter: this.$refs.mcenter,
       login: this.$refs.login,
@@ -82,13 +96,34 @@ export default {
       var requiredLogin = !!comp.$data['requiredLogin'];
       if(requiredLogin){
         // console.log(comp)
-        var instance = new logout({propsData: { label: '登出' }})
+        var instance = new logout({propsData: { label: this.$t('logout') }})
         instance.$mount() ;
+        var $this = this;
+        instance.$el.addEventListener('click', function(){ $this.setlogin(false) });
+        // console.log(instance);
+        instance.$on('click', function(){
+          console.log(this);
+        })
         comp.$refs.drawerContainer.$refs.drawer.querySelector('header').prepend(instance.$el);
+        // console.log(comp.$refs.drawerContainer.$refs.drawer.querySelector('header .logout'));
+
+        var $this = this;
+        comp.$refs.drawerContainer.$refs.drawer.querySelector('header .logout').addEventListener('click', function(){
+          
+            $this.$confirm($this.$t('leave member center'))
+            .then(_ => {
+              $this.setlogin(false);
+              $this.$refs.mcenter.isDrawerOpened = false;
+            })
+            .catch(_ => {});
+        });
       }
     }
   },
   methods:{
+    ...mapActions("main", [
+      "setlogin",
+    ])
   }
 }
 </script>

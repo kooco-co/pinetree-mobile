@@ -1,8 +1,9 @@
 <template>
-  <a class="logout" href="javascript:" @click="logout">{{label}}</a>
+  <a class="logout" href="javascript:">{{label}}</a>
 </template>
 
 <script>
+
 
 export default {
   name: 'logoutButton',
@@ -10,14 +11,11 @@ export default {
     return {
     }
   },
-  props:["label"],
+  computed: {
+  
+  },
+  props:["label","logout"],
   methods:{
-    logout: function(){
-        console.log('logout');
-        //TODO logout
-        return false;
-    }
-
   }
 }
 </script>
