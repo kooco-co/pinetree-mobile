@@ -1,0 +1,41 @@
+.member-forget{
+    
+    .el-drawer__body{
+        padding: 5em 2em 7em;
+        background: #eee;
+        color: #646981;
+    }
+    .el-input{
+        margin-bottom: 1em;
+
+    }
+    .el-select{
+        width: 100%;
+        // margin-bottom: 1em;
+
+    }
+    .el-input__inner{
+        border-color: #646981;   
+    }
+    ::placeholder{
+        color: #646981;
+    }     
+    .text-right{
+        text-align: right;
+    }
+    a{
+        width: auto;
+        padding: 0 0 0 0.5em;
+        color: inherit;
+        font-size: 0.8em;
+        // text-decoration: none;
+    }
+    .hint{
+        display: block;
+        font-size: 0.7em;
+        text-align: center;
+        width: 80%;
+        margin: 2em auto;
+        line-height: 1.6;
+    }
+}

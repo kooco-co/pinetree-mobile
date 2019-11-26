@@ -22,7 +22,7 @@
             set
           </template>
         </el-input>
-        <a class="button-setting disabled" href="javascript:"><img src="img/edit2.png"></a>
+        <a class="button-setting disabled" href="javascript:"><img src="/img/edit2.png"></a>
       </aside>
       <aside class="input-group">
         <el-input placeholder="your Email">
@@ -30,7 +30,7 @@
             set
           </template>
         </el-input>
-        <a class="button-setting disabled" href="javascript:"><img src="img/edit2.png"></a>
+        <a class="button-setting disabled" href="javascript:"><img src="/img/edit2.png"></a>
       </aside>
       <aside class="input-group">
         <el-input placeholder="phone number">
@@ -38,7 +38,7 @@
             set
           </template>
         </el-input>
-        <a class="button-setting disabled" href="javascript:"><img src="img/edit2.png"></a>
+        <a class="button-setting disabled" href="javascript:"><img src="/img/edit2.png"></a>
       </aside>
       <aside class="input-group">
         <el-input placeholder="password" type="password">
@@ -46,7 +46,7 @@
             set
           </template>
         </el-input>
-        <a class="button-setting " href="javascript:"><img src="img/edit2.png"></a>
+        <a class="button-setting " href="javascript:"><img src="/img/edit2.png"></a>
       </aside>
       
       <hr class="dashed">
@@ -59,7 +59,7 @@
             not set
           </template>
         </el-input>
-        <a class="button-setting " href="javascript:"><img src="img/edit2.png"></a>
+        <a class="button-setting " href="javascript:"><img src="/img/edit2.png"></a>
       </aside>
       <aside class="input-group">
         <el-select placeholder="Gender" v-model="gender">
@@ -68,7 +68,7 @@
           </template>
           <el-option :key="index" v-for="(item,index) in genderOptions" :value="item.value" :label="item.label">{{item.label}}</el-option>
         </el-select>
-        <a class="button-setting " href="javascript:"><img src="img/edit2.png"></a>
+        <a class="button-setting " href="javascript:"><img src="/img/edit2.png"></a>
       </aside>
       <aside class="input-group">
         <el-input :class="{notset:true}" placeholder="Line" type="text">
@@ -76,7 +76,7 @@
             not set
           </template>
         </el-input>
-        <a class="button-setting " href="javascript:"><img src="img/edit2.png"></a>
+        <a class="button-setting " href="javascript:"><img src="/img/edit2.png"></a>
       </aside>
 
       <hr class="dashed">

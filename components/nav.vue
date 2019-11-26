@@ -1,15 +1,15 @@
 <template>
     <el-header>
-        <a class="logo" href="javascript:"><img src="img/BBOS_logo_XL.png"></a>
+        <a class="logo" href="javascript:"><img src="/img/BBOS_logo_XL.png"></a>
         <a @click="menuClick" :class="['menu',{'on': menuOn}]" href="javascript:">
-            <img src="img/bur.png"></a>
+            <img src="/img/bur.png"></a>
         <i class="overlay" @click="menuClick"></i>
         <nav>
-            <img src="img/BBOS_logo_XL.png">
+            <img src="/img/BBOS_logo_XL.png">
             <a href="/">{{$t('home')}}</a>
             <!---->
-            <a href="casino">{{$t('live casino')}}</a>
-            <a href="casino">{{$t('casino')}}</a>
+            <a href="/casino">{{$t('live casino')}}</a>
+            <a href="/casino">{{$t('casino')}}</a>
             <!---->
             <a class="disabled">{{$t('vip')}}</a>
             <a class="disabled">{{$t('promotion')}}</a>
