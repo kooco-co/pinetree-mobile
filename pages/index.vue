@@ -4,7 +4,7 @@
     <el-container>
       <el-row>
         <el-col :xs="24">
-          <a class="block" href="javascript:"><img class="" src="img/157146010187.png"></a>
+          <a class="block" href="javascript:"><img src="img/157146010187.png"></a>
         </el-col>
         <el-col :xs="24">
           <span class="marquee">
@@ -12,22 +12,22 @@
           </span>
         </el-col>
         <el-col :xs="24">
-          <a class="block" href="javascript:"><img class="" src="img/157146013877.png"></a>
+          <nuxt-link class="block" to="casino"><img src="img/157146013877.png"></nuxt-link>
         </el-col>
         <el-col :xs="24">
-          <a class="block" href="javascript:"><img class="" src="img/157146016496.png"></a>
+          <nuxt-link  class="block" to="casino"><img src="img/157146016496.png"></nuxt-link>
         </el-col>
         <el-col :xs="24">
-          <a class="block" href="javascript:"><img class="" src="img/157146020736.png"></a>
+          <nuxt-link  class="block" to="casino"><img src="img/157146020736.png"></nuxt-link>
         </el-col>
         <el-col :xs="24">
-          <a class="block" href="javascript:"><img class="" src="img/footer-image.png"></a>
+          <a class="block" href="javascript:"><img src="img/footer-image.png"></a>
         </el-col>
         <el-col :xs="24">
-          <a href="javascript:"><img class="" src="img/524C85x.png"></a>
+          <a href="javascript:"><img src="img/524C85x.png"></a>
         </el-col>
         <el-col :xs="24">
-          <a href="javascript:"><img class="" src="img/footer-logo.png"></a>
+          <a href="javascript:"><img src="img/footer-logo.png"></a>
         </el-col>
       </el-row>
     </el-container>

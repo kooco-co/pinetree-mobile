@@ -40,7 +40,7 @@
                 </span>
                 <nav>
                     <a href="javascript:" @click="openNext(index)" :key="index" v-for="(item, index) in menuItem">{{$t(index)}}<i class="el-icon-arrow-right"></i></a>
-                    
+                    <a href="javascript:">{{$t('affiliate center')}}</a>
                 </nav>
             </aside>
         </el-drawer>
