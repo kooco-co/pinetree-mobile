@@ -7,7 +7,7 @@ Vue.use(VueI18nFilter)
 
 export default ({ app, store }) => {
     app.i18n = new VueI18n({
-        locale: 'zh',
+        locale: 'ja',
         messages: {
             'en': require('~/locales/en.json'),
             'zh': require('~/locales/zh.json'),
