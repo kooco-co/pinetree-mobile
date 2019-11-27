@@ -14,7 +14,7 @@
         <el-col :xs="24">
             
             <el-tabs v-model="activeName" type="card">
-                <el-tab-pane label="玩过" name="first">
+                <el-tab-pane :label="$t('played')" name="first">
                     <el-row>
                         <el-col v-for="(item,index) in played" :key="index" :span="6">
                             <a href="javascript:">
@@ -24,7 +24,7 @@
                         </el-col>
                     </el-row>
                 </el-tab-pane>
-                <el-tab-pane label="最爱" name="second">
+                <el-tab-pane :label="$t('favorite')" name="second">
                     <el-row>
                         <el-col v-for="(item,index) in fav" :key="index" :span="6">
                             <a href="javascript:">
@@ -34,7 +34,7 @@
                         </el-col>
                     </el-row>
                 </el-tab-pane>
-                <el-tab-pane label="电子" name="third">
+                <el-tab-pane :label="$t('eplay')" name="third">
                     <el-row>
                         <el-col v-for="(item,index) in casino" :key="index" :span="6">
                             <a href="javascript:">
@@ -44,25 +44,25 @@
                         </el-col>
                     </el-row>
                 </el-tab-pane>
-                <el-tab-pane label="棋牌" name="fourth">
-                    
+                <el-tab-pane :label="$t('live')" name="fourth">
+                    <el-row>
+                        <el-col v-for="(item,index) in live" :key="index" :span="6">
+                            <a href="javascript:">
+                                <img :src="item.image">
+                                {{item.label}}
+                            </a>
+                        </el-col>
+                    </el-row>
                 </el-tab-pane>
             </el-tabs>
         </el-col>
       </el-row>
     </el-container>
 
+    <cfooter :login="$refs.login" :mcenter="$refs.mcenter" ></cfooter>
 
     <hr>
-    <el-footer>
-      <nav>
-        <a href="javascript:"><img src="img/online_deposit_icon_n.png"><br>{{$t('_footer_promotions')}}</a>
-        <a v-if="isloggedin" @click="function(){ $refs.mcenter.open() }"><img src="img/0_icon_n.png"><br>{{$t('_footer_member_center')}}</a>
-        <a v-else @click="function(){ $refs.login.open() }"><img src="img/0_icon_n.png"><br>{{$t('_footer_member_center')}}</a>
-        <a href="javascript:"><img src="img/more_icon_n.png"><br>{{$t('_footer_vip')}}</a>
-      </nav>
-    </el-footer>
-
+    
     <a class="float-1"><img src="img/float1.png"></a>
     <a class="float-2" @click="function(){ $refs.message.open()}"><img src="img/float2.png"></a>
 
@@ -76,6 +76,7 @@
 
 <script>
 import headerMenu from '../components/nav'
+import cfooter from '../components/footer'
 import login from '../components/mcenter/login'
 import reg from '../components/mcenter/reg'
 import forget from '../components/mcenter/forget'
@@ -175,11 +176,27 @@ export default {
                     label: "ISB电子",
                     image: "img/casino/isb.png"
                 }
+            ],
+            live:[
+                {
+                    label: "Evo",
+                    image: "img/casino/evo.png"
+                },
+                {
+                    image: "img/casino/icon_none.png"
+                },
+                {
+                    image: "img/casino/icon_none.png"
+                },
+                {
+                    image: "img/casino/icon_none.png"
+                }
             ]
         }
     },
     components: {
         headerMenu,
+        cfooter,
         login,
         memberCenter,
         reg,

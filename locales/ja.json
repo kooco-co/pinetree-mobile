@@ -30,5 +30,10 @@
 
     "_footer_promotions": "プロモーション",
     "_footer_member_center": "会員管理",
-    "_footer_vip": "VIP"
+    "_footer_vip": "VIP",
+    
+    "played":"玩过",
+    "favorite":"最爱",
+    "eplay":"电子",
+    "live":"視訊"
 }

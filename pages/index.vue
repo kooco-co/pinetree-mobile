@@ -34,14 +34,9 @@
 
 
     <hr>
-    <el-footer>
-      <nav>
-        <a href="javascript:"><img src="img/online_deposit_icon_n.png"><br>{{$t('_footer_promotions')}}</a>
-        <a v-if="isloggedin" @click="function(){ $refs.mcenter.open() }"><img src="img/0_icon_n.png"><br>{{$t('_footer_member_center')}}</a>
-        <a v-else @click="function(){ $refs.login.open() }"><img src="img/0_icon_n.png"><br>{{$t('_footer_member_center')}}</a>
-        <a href="javascript:"><img src="img/more_icon_n.png"><br>{{$t('_footer_vip')}}</a>
-      </nav>
-    </el-footer>
+    <!-- <cfooter :login="$refs.login.open" :mcenter="$refs.mcenter.open" ></cfooter> -->
+    <!-- <hr> -->
+    <cfooter :login="$refs.login" :mcenter="$refs.mcenter" ></cfooter>
 
     <a class="float-1"><img src="img/float1.png"></a>
     <a class="float-2" @click="function(){ $refs.message.open()}"><img src="img/float2.png"></a>
@@ -56,6 +51,7 @@
 
 <script>
 import headerMenu from '../components/nav'
+import cfooter from '../components/footer'
 import login from '../components/mcenter/login'
 import reg from '../components/mcenter/reg'
 import forget from '../components/mcenter/forget'
@@ -75,6 +71,7 @@ export default {
   },
   components: {
     headerMenu,
+    cfooter,
     login,
     memberCenter,
     reg,
