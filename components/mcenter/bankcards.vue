@@ -1,6 +1,6 @@
 <template>
   <el-drawer class="member-bankcards"
-    :title="$t('Member Center')"
+    :title="$t('mcenter')"
     name="bank"
     :visible.sync="isDrawerOpened"
     :direction="direction"

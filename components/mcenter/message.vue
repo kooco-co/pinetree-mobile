@@ -1,6 +1,6 @@
 <template>
   <el-drawer class="member-messages"
-    :title="$t('Member Center')"
+    :title="$t('mcenter')"
     name="messages"
     :visible.sync="isDrawerOpened"
     :direction="direction"

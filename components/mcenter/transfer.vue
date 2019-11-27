@@ -1,6 +1,6 @@
 <template>
   <el-drawer class="member-transfer"
-    :title="$t('Member Center')"
+    :title="$t('mcenter')"
     name="transfer"
     :visible.sync="isDrawerOpened"
     :direction="direction">

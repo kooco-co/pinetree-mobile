@@ -192,18 +192,44 @@ a{
 .el-select-dropdown{
     z-index: 2051!important;
 }
-.el-date-range-picker__content{
-    float: none;
+.text-center{
+    text-align: center;
+}
+.lh2{
+    line-height: 2;
+}
+.lh3{
+    line-height: 3;
+}
+.el-date-editor.el-input, .el-date-editor.el-input__inner{
+    max-width: 100%;
+}
+[role="heading"]{
+    
+    position: absolute;
     width: 100%;
+    left: 0;
+}
+.el-drawer__close-btn{
+    
+    position: absolute;
+    left: 0;
+}
+.el-drawer__header{
+    min-height: 3em;
 }
 
-.el-picker-panel{
+.el-date-range-picker{
     width: 100vw;
     min-width: 0;
     margin-top: 0!important;
     left: 0!important;
     top: 0!important;
     border-radius: 0;
+    .el-date-range-picker__content{
+        float: none;
+        width: 100%;
+    }
 }
 .el-date-range-picker .el-picker-panel__body{
     min-width: 0;    

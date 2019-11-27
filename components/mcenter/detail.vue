@@ -1,6 +1,6 @@
 <template>
   <el-drawer class="member-detail"
-    title="Member detail"
+    :title="$t('mcenter')"
     name="Member"
     :visible.sync="isDrawerOpened"
     :direction="direction"

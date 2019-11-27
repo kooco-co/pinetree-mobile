@@ -1,6 +1,6 @@
 <template>
   <el-drawer class="member-commision"
-    :title="$t('Member Center')"
+    :title="$t('mcenter')"
     name="commision"
     :visible.sync="isDrawerOpened"
     :direction="direction"

@@ -1,6 +1,6 @@
 <template>
   <el-drawer class="member-funds"
-    :title="$t('Member Center')"
+    :title="$t('mcenter')"
     name="funds"
     :visible.sync="isDrawerOpened"
     :direction="direction"
@@ -13,13 +13,21 @@
                     <el-option value="0" label="全部">全部</el-option>
                 </el-select>
             </el-col>
-            <el-col :xs="24">
+            <el-col :xs="11">
                 <el-date-picker
-                type="daterange"
-                v-model="dateRange"
-                range-separator="-"
-                start-placeholder="开始日期"
-                end-placeholder="结束日期"></el-date-picker>
+                v-model="dateRangeBegin"
+                placeholder="开始日期"></el-date-picker>
+            </el-col>
+            <el-col :xs="2" class="text-center lh2">
+                -
+            </el-col>
+            <el-col :xs="11">
+                <el-date-picker
+                v-model="dateRangeEnd"
+                placeholder="结束日期"></el-date-picker>
+            </el-col>
+            <el-col :xs="24">
+                &nbsp;
             </el-col>
             <el-col :xs="24">
                 <el-button type="message">
@@ -76,7 +84,8 @@ export default {
             direction: 'rtl',
             isDrawerOpened: false,
             requiredLogin: true,
-            dateRange: [],
+            dateRangeBegin: {},
+            dateRangeEnd: {},
             listSorting: 'desc',
             listData:[{
                 transactionTime: '2019-11-04 04:07:41',

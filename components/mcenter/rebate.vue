@@ -1,6 +1,6 @@
 <template>
   <el-drawer class="member-rebate"
-    :title="$t('Member Center')"
+    :title="$t('mcenter')"
     name="rebate"
     :visible.sync="isDrawerOpened"
     :direction="direction"

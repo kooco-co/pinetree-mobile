@@ -1,7 +1,7 @@
 <template>
     <aside>
         <el-drawer class="member-center"
-            :title="$t('Member Center')"
+            :title="$t('mcenter')"
             name="Member"
             :visible.sync="isDrawerOpened"
             :direction="direction"
