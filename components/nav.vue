@@ -8,7 +8,7 @@
             <img src="img/BBOS_logo_XL.png">
             <nuxt-link to="/">{{$t('home')}}</nuxt-link>
             <!---->
-            <nuxt-link v-if="isloggedin" to="/casino">{{$t('live casino')}}</nuxt-link>
+            <nuxt-link v-if="isloggedin" to="/live">{{$t('live casino')}}</nuxt-link>
             <nuxt-link v-if="isloggedin" to="/casino">{{$t('casino')}}</nuxt-link>
             <!---->
             <a class="disabled">{{$t('vip')}}</a>
@@ -74,6 +74,7 @@ export default {
     },
     logout: function(){
       this.setlogin(false);
+      this.$router.replace('/')
     },
     ...mapActions("main", [
       "setlogin",

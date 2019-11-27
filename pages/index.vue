@@ -12,13 +12,16 @@
           </span>
         </el-col>
         <el-col :xs="24">
-          <nuxt-link class="block" to="casino"><img src="img/157146013877.png"></nuxt-link>
+          <nuxt-link v-if="isloggedin" class="block" to="live"><img src="img/157146013877.png"></nuxt-link>
+          <a v-else class="block" @click="function(){ $refs.login.open()}"><img src="img/157146013877.png"></a>
         </el-col>
         <el-col :xs="24">
-          <nuxt-link  class="block" to="casino"><img src="img/157146016496.png"></nuxt-link>
+          <nuxt-link v-if="isloggedin"  class="block" to="casino"><img src="img/157146016496.png"></nuxt-link>
+          <a v-else class="block" @click="function(){ $refs.login.open()}"><img src="img/157146016496.png"></a>
         </el-col>
         <el-col :xs="24">
-          <nuxt-link  class="block" to="casino"><img src="img/157146020736.png"></nuxt-link>
+          <nuxt-link v-if="isloggedin"  class="block" to="casino"><img src="img/157146020736.png"></nuxt-link>
+          <a v-else class="block" @click="function(){ $refs.login.open()}"><img src="img/157146020736.png"></a>
         </el-col>
         <el-col :xs="24">
           <a class="block" href="javascript:"><img src="img/footer-image.png"></a>
