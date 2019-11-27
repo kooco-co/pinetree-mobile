@@ -5,7 +5,7 @@
             <img src="img/bur.png"></a>
         <i class="overlay" @click="menuClick"></i>
         <nav>
-            <img src="img/BBOS_logo_XL.png">
+            <figure><img src="img/BBOS_logo_XL.png"></figure>
             <nuxt-link to="/">{{$t('home')}}</nuxt-link>
             <!---->
             <nuxt-link v-if="isloggedin" to="/live">{{$t('live casino')}}</nuxt-link>
