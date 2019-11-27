@@ -84,8 +84,8 @@ export default {
             direction: 'rtl',
             isDrawerOpened: false,
             requiredLogin: true,
-            dateRangeBegin: {},
-            dateRangeEnd: {},
+            dateRangeBegin: new Date(),
+            dateRangeEnd: new Date(),
             listSorting: 'desc',
             listData:[{
                 transactionTime: '2019-11-04 04:07:41',
