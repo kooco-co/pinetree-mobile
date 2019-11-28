@@ -216,7 +216,7 @@ a{
     left: 0;
 }
 .el-drawer__header{
-    min-height: 3em;
+    min-height: #{(44/375*100vw)}!important;
 }
 
 .el-date-range-picker{
