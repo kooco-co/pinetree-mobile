@@ -75,6 +75,7 @@
         max-height: calc(100vh - 50vw);
         overflow: auto;
         padding-bottom: 25%;
+        -webkit-overflow-scrolling: touch; 
         a{
             padding: 0.8em;
             display: block;

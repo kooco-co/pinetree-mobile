@@ -237,4 +237,5 @@ a{
     min-width: 0;    
     max-height: 85vh;
     overflow: auto;
+    -webkit-overflow-scrolling: touch; 
 }
