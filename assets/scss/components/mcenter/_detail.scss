@@ -33,6 +33,7 @@
             .el-select{
                 margin-right: 0.2em;
                 flex: 1;
+                display: flex;
             }
             
         }
@@ -46,6 +47,12 @@
             border-left: 0;
             background: #eee;
             transition-duration: 0.2s;
+            
+            display: inline-block;
+            line-height: 3;
+            padding: 0 1em;
+            width: auto;
+            height: 40px;
         }
         .el-input{
             border-right: 0;
@@ -76,6 +83,7 @@
             background: #eee;
             transition-duration: 0.2s;
             line-height: inherit;
+            border-color: #ddd;
             &:focus{
                 background: #fff;
                 border-color: blue;
