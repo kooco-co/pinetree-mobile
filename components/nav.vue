@@ -1,5 +1,5 @@
 <template>
-    <el-header>
+    <el-header :class="{'on': menuOn}">
         <nuxt-link class="logo" to="/"><img src="img/BBOS_logo_XL.png"></nuxt-link>
         <a @click="menuClick" :class="['menu',{'on': menuOn}]" href="javascript:">
             <img src="img/bur.png"></a>
