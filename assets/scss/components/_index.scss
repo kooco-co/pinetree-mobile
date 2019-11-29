@@ -13,7 +13,9 @@
 
 @import '_header';
 @import '_footer';
-
+.el-drawer{
+    -webkit-overflow-scrolling: touch; 
+}
 .el-button--default{
     background: #000;
     border: #000;
