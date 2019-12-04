@@ -10,10 +10,10 @@
             <aside class="member-center-container">
                 <span class="welcome">
                     <el-row>
-                        <el-col :xs="12">
+                        <el-col :sm="12" :xs="12">
                             <nuxt-link class="logo" to="/"> <img src="img/BBOS_logo_XL.png"></nuxt-link>
                         </el-col>
-                        <el-col :xs="12">
+                        <el-col :sm="12" :xs="12">
                             <aside class="user-info">
                                 <span>koocotest1121</span><br>
                                 <span>{{(''*1).toFixed(2)}}</span><span>USD</span><i class="icon-plus-squared"></i>
@@ -21,17 +21,17 @@
                         </el-col>
                     </el-row>
                     <el-row>
-                        <el-col :xs="8">
+                        <el-col :sm="8" :xs="8">
                             <a href="javascript:" class="icon-link"><img src="img/icon_deposit_n.png"><img class="hover" src="img/icon_deposit_h.png">
                             <span>{{$t('deposit')}}</span>
                             </a>
                         </el-col>
-                        <el-col :xs="8">
+                        <el-col :sm="8" :xs="8">
                             <a href="javascript:" @click="openNext('transfer')" class="icon-link"><img src="img/icon_exchange_n.png"><img class="hover" src="img/icon_exchange_h.png">
                             <span>{{$t('transfer')}}</span>
                             </a>
                         </el-col>
-                        <el-col :xs="8">
+                        <el-col :sm="8" :xs="8">
                             <a href="javascript:" class="icon-link"><img src="img/icon_withdrawals_n.png"><img class="hover" src="img/icon_withdrawals_h.png">
                             <span>{{$t('withdraw')}}</span>
                             </a>

@@ -83,5 +83,9 @@ html {
 .el-select-dropdown{
     // left: 0!important;
 }
+.window{
+    z-index: 2050;
+    position: relative;
+}
 @import 'components';
 @import 'icon/fontello';

@@ -30,7 +30,9 @@
           <a href="javascript:"><img src="img/524C85x.png"></a>
         </el-col>
         <el-col :xs="24">
-          <a href="javascript:"><img src="img/footer-logo.png"></a>
+          <!-- 庫拉索 logo -->
+          <div class="logo" id="apg-9c6a14f9-57f6-4463-a828-4f083c8395a1" data-apg-seal-id="9c6a14f9-57f6-4463-a828-4f083c8395a1" data-apg-image-size="128" data-apg-image-type="basic-small"></div>
+          <!-- ./庫拉索 logo -->
         </el-col>
       </el-row>
     </el-container>
@@ -41,14 +43,19 @@
     <!-- <hr> -->
     <cfooter :login="$refs.login" :mcenter="$refs.mcenter" ></cfooter>
 
-    <a class="float-1"><img src="img/float1.png"></a>
-    <a class="float-2" @click="function(){ $refs.message.open()}"><img src="img/float2.png"></a>
 
 
     <memberCenter ref="mcenter" drawer="false"></memberCenter>
     <login ref="login" drawer="false" :reg="this.$refs.reg" :forget="this.$refs.forget"></login>
     <reg ref="reg" drawer="false"></reg>
     <forget ref="forget" drawer="false"></forget>
+    <!-- 庫拉索 logo -->
+    <script type="text/javascript" src="https://9c6a14f9-57f6-4463-a828-4f083c8395a1.snippet.antillephone.com/apg-seal.js"></script>
+    <!-- ./庫拉索 logo -->
+    <!-- Start of LiveChat (www.livechatinc.com) code --><script type="text/javascript">window.__lc = window.__lc || {};window.__lc.license = 9014215;(function() {    var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;    lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);})();</script><noscript><a href="https://www.livechatinc.com/chat-with/9014215/" rel="nofollow">Chat with us</a>,powered by <a href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript><!-- End of LiveChat code -->
+    <!-- よくある質問(須有jQuery) -->
+    <script src="//theme.zdassets.com/theme_assets/9266419/becbac08eab933217dbf84afc44e158fa7ff4172.js" async></script>
+    <!-- ./よくある質問 -->
   </el-main>
 </template>
 
@@ -62,6 +69,8 @@ import memberCenter from '../components/mcenter/index'
 import logoutButton from '../components/mcenter/logoutButton'
 import Vue from 'vue'
 import { mapState, mapGetters, mapActions } from "vuex"
+import JQuery from 'jquery'
+window.$ = window.JQuery = JQuery;
 var logout = Vue.extend(logoutButton)
 
 
