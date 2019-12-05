@@ -8,31 +8,31 @@
     <h3>返水明细</h3>
     <aside class="rebate-content" :key="index" v-for="(item,index) in pagedData">
         <el-row>
-            <el-col class="th" :xs="8">SN</el-col>
-            <el-col :xs="16"><span>{{item.SN}}</span></el-col>
+            <el-col class="th" :sm="8" :xs="8">SN</el-col>
+            <el-col :sm="16" :xs="16"><span>{{item.SN}}</span></el-col>
         </el-row>
         <el-row>
-            <el-col class="th" :xs="8">周期</el-col>
-            <el-col :xs="16"><span>{{item.cycle}}</span></el-col>
+            <el-col class="th" :sm="8" :xs="8">周期</el-col>
+            <el-col :sm="16" :xs="16"><span>{{item.cycle}}</span></el-col>
         </el-row>
         <el-row>
-            <el-col class="th" :xs="8">时间区间</el-col>
-            <el-col :xs="16"><span>{{item.duration1}}~<br>{{item.duration2}}</span></el-col>
+            <el-col class="th" :sm="8" :xs="8">时间区间</el-col>
+            <el-col :sm="16" :xs="16"><span>{{item.duration1}}~<br>{{item.duration2}}</span></el-col>
         </el-row>
         <el-row>
-            <el-col class="th" :xs="8">目前有效投注</el-col>
-            <el-col :xs="16">
+            <el-col class="th" :sm="8" :xs="8">目前有效投注</el-col>
+            <el-col :sm="16" :xs="16">
                 <span v-if="!isNaN(item.effectiveStake*1)">{{item.effectiveStake}}</span>
                 <a v-else>实时计算</a>
             </el-col>
         </el-row>
         <el-row>
-            <el-col class="th" :xs="8">目前返水金额</el-col>
-            <el-col :xs="16"><span>{{item.rebate}}</span></el-col>
+            <el-col class="th" :sm="8" :xs="8">目前返水金额</el-col>
+            <el-col :sm="16" :xs="16"><span>{{item.rebate}}</span></el-col>
         </el-row>
         <el-row>
-            <el-col class="th" :xs="8">状态</el-col>
-            <el-col :xs="16"><span>{{item.status}}</span></el-col>
+            <el-col class="th" :sm="8" :xs="8">状态</el-col>
+            <el-col :sm="16" :xs="16"><span>{{item.status}}</span></el-col>
         </el-row>
         
     </aside>

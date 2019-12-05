@@ -14,10 +14,10 @@
       <el-col :xs="24">
         &nbsp;
       </el-col>
-      <el-col :xs="12">
+      <el-col :sm="12" :xs="12">
         <span class="underline">常用帐号(1')</span>
       </el-col>
-      <el-col :xs="12">
+      <el-col :sm="12" :xs="12">
         <el-button type="success" round><i class="el-icon-plus"></i>新增帐号</el-button>
       </el-col>
       <el-col :xs="24">

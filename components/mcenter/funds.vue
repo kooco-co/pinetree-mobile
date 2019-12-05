@@ -13,15 +13,15 @@
                     <el-option value="0" label="全部">全部</el-option>
                 </el-select>
             </el-col>
-            <el-col :xs="11">
+            <el-col :sm="11" :xs="11">
                 <el-date-picker
                 v-model="dateRangeBegin"
                 placeholder="开始日期"></el-date-picker>
             </el-col>
-            <el-col :xs="2" class="text-center lh2">
+            <el-col :sm="2" :xs="2" class="text-center lh2">
                 -
             </el-col>
-            <el-col :xs="11">
+            <el-col :sm="11" :xs="11">
                 <el-date-picker
                 v-model="dateRangeEnd"
                 placeholder="结束日期"></el-date-picker>
@@ -43,18 +43,18 @@
         </el-row>
         <aside class="transaction-detail">
             <el-row v-for="(item,index) in pagedData" :key="index">
-                <el-col class="th" :xs="8">交易时间</el-col>
-                <el-col class="th" :xs="16">{{item.transactionTime}}</el-col>
-                <el-col :xs="8">类别</el-col>
-                <el-col :xs="16">{{item.type}}</el-col>
-                <el-col :xs="8">交易额度</el-col>
-                <el-col :class="{'red': item.transactionAmount<0}" :xs="16">{{item.transactionAmount.toFixed(2)}}</el-col>
-                <el-col :xs="8">主帐户小计</el-col>
-                <el-col :xs="16">{{item.totalAmount.toFixed(2)}}</el-col>
-                <el-col :xs="8">单号</el-col>
-                <el-col :xs="16">{{item.serial}}</el-col>
-                <el-col :xs="8">备注</el-col>
-                <el-col :xs="16">{{item.remark}}</el-col>
+                <el-col class="th" :sm="8" :xs="8">交易时间</el-col>
+                <el-col class="th" :sm="16" :xs="16">{{item.transactionTime}}</el-col>
+                <el-col :sm="8" :xs="8">类别</el-col>
+                <el-col :sm="16" :xs="16">{{item.type}}</el-col>
+                <el-col :sm="8" :xs="8">交易额度</el-col>
+                <el-col :class="{'red': item.transactionAmount<0}" :sm="16" :xs="16">{{item.transactionAmount.toFixed(2)}}</el-col>
+                <el-col :sm="8" :xs="8">主帐户小计</el-col>
+                <el-col :sm="16" :xs="16">{{item.totalAmount.toFixed(2)}}</el-col>
+                <el-col :sm="8" :xs="8">单号</el-col>
+                <el-col :sm="16" :xs="16">{{item.serial}}</el-col>
+                <el-col :sm="8" :xs="8">备注</el-col>
+                <el-col :sm="16" :xs="16">{{item.remark}}</el-col>
             </el-row>
         </aside>
         <el-pagination v-if="listData.length > pageSize"

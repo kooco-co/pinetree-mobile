@@ -8,50 +8,50 @@
         <h3>投注总额</h3>
         <aside :class="['summary',{'blue':summary.today.effectiveStake == 0}]">
             <el-row>
-                <el-col :xs="12">今日</el-col>
-                <el-col class="text-right light" :xs="12">{{summary.today.duration}}</el-col>
-                <el-col :xs="12">有效投注额</el-col>
-                <el-col class="text-right hl" :xs="12">{{summary.today.effectiveStake}}</el-col>
+                <el-col :sm="12" :xs="12">今日</el-col>
+                <el-col class="text-right light" :sm="12" :xs="12">{{summary.today.duration}}</el-col>
+                <el-col :sm="12" :xs="12">有效投注额</el-col>
+                <el-col class="text-right hl" :sm="12" :xs="12">{{summary.today.effectiveStake}}</el-col>
             </el-row>
         </aside>
         <aside :class="['summary',{'blue':summary.yesterday.effectiveStake == 0}]">
             <el-row>
-                <el-col :xs="12">昨日</el-col>
-                <el-col class="text-right light" :xs="12">{{summary.yesterday.duration}}</el-col>
-                <el-col :xs="12">有效投注额</el-col>
-                <el-col class="text-right hl" :xs="12">{{summary.yesterday.effectiveStake}}</el-col>
+                <el-col :sm="12" :xs="12">昨日</el-col>
+                <el-col class="text-right light" :sm="12" :xs="12">{{summary.yesterday.duration}}</el-col>
+                <el-col :sm="12" :xs="12">有效投注额</el-col>
+                <el-col class="text-right hl" :sm="12" :xs="12">{{summary.yesterday.effectiveStake}}</el-col>
             </el-row>
         </aside>
         <aside :class="['summary',{'blue':summary.thisWeek.effectiveStake == 0}]">
             <el-row>
-                <el-col :xs="12">本周</el-col>
-                <el-col class="text-right light" :xs="12">{{summary.thisWeek.duration}}</el-col>
-                <el-col :xs="12">有效投注额</el-col>
-                <el-col class="text-right hl" :xs="12">{{summary.thisWeek.effectiveStake}}</el-col>
+                <el-col :sm="12" :xs="12">本周</el-col>
+                <el-col class="text-right light" :sm="12" :xs="12">{{summary.thisWeek.duration}}</el-col>
+                <el-col :sm="12" :xs="12">有效投注额</el-col>
+                <el-col class="text-right hl" :sm="12" :xs="12">{{summary.thisWeek.effectiveStake}}</el-col>
             </el-row>
         </aside>
         <aside :class="['summary',{'blue':summary.lastWeek.effectiveStake == 0}]">
             <el-row>
-                <el-col :xs="12">上周</el-col>
-                <el-col class="text-right light" :xs="12">{{summary.lastWeek.duration}}</el-col>
-                <el-col :xs="12">有效投注额</el-col>
-                <el-col class="text-right hl" :xs="12">{{summary.lastWeek.effectiveStake}}</el-col>
+                <el-col :sm="12" :xs="12">上周</el-col>
+                <el-col class="text-right light" :sm="12" :xs="12">{{summary.lastWeek.duration}}</el-col>
+                <el-col :sm="12" :xs="12">有效投注额</el-col>
+                <el-col class="text-right hl" :sm="12" :xs="12">{{summary.lastWeek.effectiveStake}}</el-col>
             </el-row>
         </aside>
         <aside :class="['summary',{'blue':summary.thisMonth.effectiveStake == 0}]">
             <el-row>
-                <el-col :xs="12">本月</el-col>
-                <el-col class="text-right light" :xs="12">{{summary.thisMonth.duration}}</el-col>
-                <el-col :xs="12">有效投注额</el-col>
-                <el-col class="text-right hl" :xs="12">{{summary.thisMonth.effectiveStake}}</el-col>
+                <el-col :sm="12" :xs="12">本月</el-col>
+                <el-col class="text-right light" :sm="12" :xs="12">{{summary.thisMonth.duration}}</el-col>
+                <el-col :sm="12" :xs="12">有效投注额</el-col>
+                <el-col class="text-right hl" :sm="12" :xs="12">{{summary.thisMonth.effectiveStake}}</el-col>
             </el-row>
         </aside>
         <aside :class="['summary',{'blue':summary.lastMonth.effectiveStake == 0}]">
             <el-row>
-                <el-col :xs="12">上月</el-col>
-                <el-col class="text-right light" :xs="12">{{summary.lastMonth.duration}}</el-col>
-                <el-col :xs="12">有效投注额</el-col>
-                <el-col class="text-right hl" :xs="12">{{summary.lastMonth.effectiveStake.toFixed(2)}}</el-col>
+                <el-col :sm="12" :xs="12">上月</el-col>
+                <el-col class="text-right light" :sm="12" :xs="12">{{summary.lastMonth.duration}}</el-col>
+                <el-col :sm="12" :xs="12">有效投注额</el-col>
+                <el-col class="text-right hl" :sm="12" :xs="12">{{summary.lastMonth.effectiveStake.toFixed(2)}}</el-col>
             </el-row>
         </aside>
     </aside>

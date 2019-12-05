@@ -12,6 +12,7 @@ export default ({ app, store }) => {
             'en': require('~/locales/en.json'),
             'zh': require('~/locales/zh.json'),
             'ja': require('~/locales/ja.json'),
-        }
+        },
+        silentTranslationWarn: true
     })
 }
